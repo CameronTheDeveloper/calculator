@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(61, 146, 122);
+}
+
+#buttons{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.button{
+    background-color: rgb(41, 25, 102);
+    border-radius: 5px;
+    color: white;
+}
