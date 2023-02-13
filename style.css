@@ -2,14 +2,27 @@ body {
     background-color: rgb(61, 146, 122);
 }
 
-#buttons{
+#calculator{
+    background-color: grey;
+}
+
+#buttons, .row1, .row2, .row3, .operators{
     display: flex;
-    gap: 16px;
+}
+
+#buttons{
     justify-content: center;
 }
 
-.button{
-    background-color: rgb(41, 25, 102);
+.row1, .row2, .row3, .operators{
+    flex-direction: column;
+}
+
+.button {
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    padding: 8px;
+    margin: 2px;
 }
