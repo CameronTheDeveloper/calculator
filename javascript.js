@@ -1,3 +1,5 @@
+const buttons = document.querySelectorAll('.button'); 
+const display = document.querySelector('#display-content');
 function add(num1, num2){
     return num1 + num2;
 }
@@ -32,3 +34,10 @@ function operate(num1, op, num2){
             return "Invalid operator";
     }
 }
+
+//For each button, add click event listener. 
+buttons.forEach(button => {
+    button.addEventListener("click", event =>{
+        display.textContent += event.target.textContent;
+    });
+});
