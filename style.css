@@ -5,14 +5,14 @@ body {
 #calculator{
     justify-content: center;
     background-color: grey;
-    height: 200px;
+    height: 500px;
 }
 
-#calculator, #buttons, .row1, .row2, .row3, .operators{
+#calculator, #buttons-mid, .row1, .row2, .row3, .operators{
     display: flex;
 }
 
-#buttons{
+#buttons-mid{
     justify-content: center;
     align-items: center;
 }
@@ -21,7 +21,7 @@ body {
     flex-direction: column;
 }
 
-.button {
+.button{
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     color: rgb(0, 0, 0);
