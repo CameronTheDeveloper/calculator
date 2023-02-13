@@ -3,15 +3,18 @@ body {
 }
 
 #calculator{
+    justify-content: center;
     background-color: grey;
+    height: 200px;
 }
 
-#buttons, .row1, .row2, .row3, .operators{
+#calculator, #buttons, .row1, .row2, .row3, .operators{
     display: flex;
 }
 
 #buttons{
     justify-content: center;
+    align-items: center;
 }
 
 .row1, .row2, .row3, .operators{
