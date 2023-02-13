@@ -35,9 +35,23 @@ function operate(num1, op, num2){
     }
 }
 
+//buttonClicked parameter = the text content of whichever button was clicked
+function displayBtnClicked(buttonClicked){
+    switch(buttonClicked){
+        case 'clear':
+            display.innerHTML = "";
+            break;
+        case '=':
+            
+            break;
+        default:
+            display.textContent += buttonClicked;
+    }
+}
+
 //For each button, add click event listener. 
 buttons.forEach(button => {
     button.addEventListener("click", event =>{
-        display.textContent += event.target.textContent;
+        displayBtnClicked(event.target.textContent);
     });
 });
