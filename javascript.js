@@ -1,5 +1,12 @@
 const buttons = document.querySelectorAll('.button'); 
-const display = document.querySelector('#display-content');
+const displays = document.querySelectorAll('.display');
+const topDisplay = document.querySelector('.display.top');
+const bottDisplay = document.querySelector('.display.bott');
+
+let op = ' ';
+let num1 = 0;
+let num2 = 0;
+
 function add(num1, num2){
     return num1 + num2;
 }
@@ -19,33 +26,33 @@ function divide(num1, num2){
 function operate(num1, op, num2){
     switch (op){
         case '+':
-            return num1 + num2;
-            break;
+            return add(num1, num2);
         case '-':
-            return num1 - num2;
-            break;
+            return subtract(num1, num2);
         case '*':
-        return num1 * num2;
-        break;
+            return multiply(num1, num2);
         case '/':
-            return num1 / num2;
-            break;
+            return divide(num1, num2);
         default:
             return "Invalid operator";
     }
 }
 
-//buttonClicked parameter = the text content of whichever button was clicked
+//Display the button that was clicked
 function displayBtnClicked(buttonClicked){
     switch(buttonClicked){
         case 'clear':
-            display.innerHTML = "";
+            topDisplay.innerHTML = ' ';
+            bottDisplay.innerHTML = ' ';
+            break;
+        case '+':
+            
             break;
         case '=':
             
             break;
         default:
-            display.textContent += buttonClicked;
+            bottDisplay.textContent += buttonClicked;
     }
 }
 

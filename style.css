@@ -20,14 +20,27 @@ body {
     display: flex;
 }
 
+/* Display */
 #display{
+    flex-direction: column;
     background-color: rgb(157, 157, 157);
     width: 125px;
-    height: 50px;
+    height: 55px;
+    font-weight: 700;
     align-items: end;
     justify-content: end;
+    justify-content: space-between;
+    padding: 2px;
+    margin: 2px;
+}
+
+.display.top{
+    font-size: 12px;
+    font-style:italic;
+}
+
+.display.bott{
     color:rgb(0, 0, 0);
-    font-weight: 700;
 }
 
 #buttons-top{
