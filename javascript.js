@@ -55,10 +55,10 @@ function displayBtnClicked(buttonClicked){
             if (op !== ''){     //If an operator has already been selected
                 num2 = parseFloat(bottDisplay.textContent);
                 num1 = operate(num1, op, num2);
-                bottDisplay.innerHTML = '';
             } else{
                 num1 = parseFloat(bottDisplay.textContent);
             }
+            bottDisplay.innerHTML = '';
             op = buttonClicked;
             topDisplay.textContent = ' ' + num1 + ' ' + op;
             break;
