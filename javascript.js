@@ -31,7 +31,7 @@ function operate(num1, op, num2){
             return add(num1, num2);
         case '-':
             return subtract(num1, num2);
-        case '*':
+        case 'x':
             return multiply(num1, num2);
         case '/':
             return divide(num1, num2);
@@ -51,14 +51,19 @@ function displayBtnClicked(buttonClicked){
         case '+':
             num1 = parseFloat(bottDisplay.textContent);
             op = '+';
-            topDisplay.textContent = num1;
+            topDisplay.textContent = ' ' + num1 + ' ' + op;
+            bottDisplay.innerHTML = '';
+            break;
+        case 'x':
+            num1 = parseFloat(bottDisplay.textContent);
+            op = 'x';
+            topDisplay.textContent = ' ' + num1 + ' ' + op;
             bottDisplay.innerHTML = '';
             break;
         case '=':
             num2 = parseFloat(bottDisplay.textContent);
             result = operate(num1, op, num2);
-            (result);
-            bottDisplay.innerHTML = '';
+            topDisplay.textContent += ( ' ' + num2 + ' = ')
             bottDisplay.textContent = result;    
             op = '';   
             break;
