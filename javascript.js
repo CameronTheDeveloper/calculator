@@ -75,8 +75,16 @@ function displayBtnClicked(buttonClicked){
         case '=':
             num2 = parseFloat(bottDisplay.textContent);
             result = operate(num1, op, num2);
-            topDisplay.textContent += ( ' ' + num2 + ' = ')
-            bottDisplay.textContent = result;    
+            topDisplay.textContent += (' ' + num2 + ' = ')
+            
+            if (result % 1 !== 0){
+                bottDisplay.textContent = result.toFixed(3);
+            }
+            else{
+                bottDisplay.textContent = result;
+            }
+            
+            //result too many decimal places    
             op = '';   
             break;
         default:
