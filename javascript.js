@@ -52,10 +52,15 @@ function displayBtnClicked(buttonClicked){
         case '-':
         case 'x':
         case '/':
-            num1 = parseFloat(bottDisplay.textContent);
+            if (op !== ''){     //If an operator has already been selected
+                num2 = parseFloat(bottDisplay.textContent);
+                num1 = operate(num1, op, num2);
+                bottDisplay.innerHTML = '';
+            } else{
+                num1 = parseFloat(bottDisplay.textContent);
+            }
             op = buttonClicked;
             topDisplay.textContent = ' ' + num1 + ' ' + op;
-            bottDisplay.innerHTML = '';
             break;
         case '=':
             num2 = parseFloat(bottDisplay.textContent);
