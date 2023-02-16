@@ -49,26 +49,11 @@ function displayBtnClicked(buttonClicked){
             op = '';
             break;
         case '+':
-            num1 = parseFloat(bottDisplay.textContent);
-            op = '+';
-            topDisplay.textContent = ' ' + num1 + ' ' + op;
-            bottDisplay.innerHTML = '';
-            break;
         case '-':
-            num1 = parseFloat(bottDisplay.textContent);
-            op = '-';
-            topDisplay.textContent = ' ' + num1 + ' ' + op;
-            bottDisplay.innerHTML = '';
-            break;
         case 'x':
-            num1 = parseFloat(bottDisplay.textContent);
-            op = 'x';
-            topDisplay.textContent = ' ' + num1 + ' ' + op;
-            bottDisplay.innerHTML = '';
-            break;
         case '/':
             num1 = parseFloat(bottDisplay.textContent);
-            op = '/';
+            op = buttonClicked;
             topDisplay.textContent = ' ' + num1 + ' ' + op;
             bottDisplay.innerHTML = '';
             break;
@@ -82,9 +67,7 @@ function displayBtnClicked(buttonClicked){
             }
             else{
                 bottDisplay.textContent = result;
-            }
-            
-            //result too many decimal places    
+            }    
             op = '';   
             break;
         default:
